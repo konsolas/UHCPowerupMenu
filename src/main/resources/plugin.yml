@@ -1,0 +1,14 @@
+name: UHCPowerupMenu
+version: 1.0-SNAPSHOT
+api-version: 1.16
+author: konsolas
+main: me.konsolas.uhcpowerupmenu.UHCPowerupMenu
+commands:
+  openmenu:
+    aliases: [menu]
+    description: Open the UHC Powerup Menu
+    permission: uhcpowerupmenu.openmenu
+permissions:
+  uhcpowerupmenu.openmenu:
+    description: Allows a player to open the UHC powerup menu
+    default: true

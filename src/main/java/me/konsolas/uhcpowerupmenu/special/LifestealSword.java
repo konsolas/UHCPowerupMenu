@@ -6,6 +6,7 @@ import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.enchantments.Enchantment;
+import org.bukkit.entity.Damageable;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -28,8 +29,9 @@ public class LifestealSword implements Listener {
         ItemMeta meta = Objects.requireNonNull(lifestealItem.getItemMeta());
         meta.addEnchant(Enchantment.VANISHING_CURSE, 1, false);
         meta.setDisplayName(ChatColor.RED + "Lifestealer");
-        meta.setLore(Collections.singletonList(ChatColor.RED + "Heals 50% of damage given"));
+        meta.setLore(Collections.singletonList(ChatColor.RED + "Heals 25% of damage given"));
         meta.getPersistentDataContainer().set(lifestealKey, PersistentDataType.BYTE, (byte) 1);
+
         lifestealItem.setItemMeta(meta);
     }
 
@@ -47,7 +49,7 @@ public class LifestealSword implements Listener {
             ItemStack weapon = damager.getEquipment().getItemInMainHand();
             if (weapon.getItemMeta() != null
                     && weapon.getItemMeta().getPersistentDataContainer().has(lifestealKey, PersistentDataType.BYTE)) {
-                damager.setHealth(Math.min(damager.getHealth() + event.getFinalDamage() / 2,
+                damager.setHealth(Math.min(damager.getHealth() + event.getFinalDamage() / 4,
                         Objects.requireNonNull(damager.getAttribute(Attribute.GENERIC_MAX_HEALTH)).getValue()));
             }
         }

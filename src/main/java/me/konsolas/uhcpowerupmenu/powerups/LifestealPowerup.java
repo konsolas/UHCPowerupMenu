@@ -1,3 +1,4 @@
+
 package me.konsolas.uhcpowerupmenu.powerups;
 
 import me.konsolas.uhcpowerupmenu.UHCPowerupMenu;

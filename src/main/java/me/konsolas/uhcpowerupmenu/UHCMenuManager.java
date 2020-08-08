@@ -1,13 +1,6 @@
 package me.konsolas.uhcpowerupmenu;
 
-import me.konsolas.uhcpowerupmenu.powerups.BuffsPowerup;
-import me.konsolas.uhcpowerupmenu.powerups.CursedRegenPowerup;
-import me.konsolas.uhcpowerupmenu.powerups.HastePowerup;
-import me.konsolas.uhcpowerupmenu.powerups.InvisPowerup;
-import me.konsolas.uhcpowerupmenu.powerups.LifestealPowerup;
-import me.konsolas.uhcpowerupmenu.powerups.MaxHealthPowerup;
-import me.konsolas.uhcpowerupmenu.powerups.Powerup;
-import me.konsolas.uhcpowerupmenu.powerups.SpeedyPickPowerup;
+import me.konsolas.uhcpowerupmenu.powerups.*;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -28,10 +21,10 @@ public class UHCMenuManager implements Listener {
         powerups.add(new SpeedyPickPowerup(plugin));
         powerups.add(new BuffsPowerup(plugin));
         powerups.add(new LifestealPowerup(plugin));
-        powerups.add(new CursedRegenPowerup(plugin));
         powerups.add(new MaxHealthPowerup(plugin));
         powerups.add(new HastePowerup(plugin));
         powerups.add(new InvisPowerup(plugin));
+        powerups.add(new BowPowerup(plugin));
     }
 
     public UHCMenuManager(UHCPowerupMenu plugin) {

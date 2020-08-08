@@ -24,11 +24,5 @@ public class ReduceRedHearts implements Listener {
                 target.setAbsorptionAmount(target.getAbsorptionAmount() + 2);
             }
         }
-
-
     }
-
-
-
-
 }

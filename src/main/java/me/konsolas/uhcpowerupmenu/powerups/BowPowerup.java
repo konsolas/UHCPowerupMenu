@@ -10,7 +10,6 @@ public class BowPowerup extends AbstractPowerup {
                 "Soul Split",
                 "The user adds its HP to the target's HP, then equally shares the combined HP with the target.", "You only get one shot");
     }
-
     @Override
     public void apply(Player target) {
         super.apply(target);

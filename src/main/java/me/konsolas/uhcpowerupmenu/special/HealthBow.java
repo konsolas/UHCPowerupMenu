@@ -73,16 +73,8 @@ public class HealthBow implements Listener {
                         shooter.sendMessage("You shared health with " + target.getName() + "!");
                         target.sendMessage("You shared health with " + shooter.getName() + "!");
                     }
-
                 }
             }
-
-
         }
-
     }
-
-
-
-
 }

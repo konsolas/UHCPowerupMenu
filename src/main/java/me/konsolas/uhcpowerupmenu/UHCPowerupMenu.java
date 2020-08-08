@@ -22,6 +22,7 @@ public class UHCPowerupMenu extends JavaPlugin {
         getServer().getPluginManager().registerEvents(uhcMenuManager, this);
         getServer().getPluginManager().registerEvents(lifestealSword, this);
         getServer().getPluginManager().registerEvents(new ReduceRedHearts(), this);
+        getServer().getPluginManager().registerEvents(healthBow, this);
     }
 
     @Override
